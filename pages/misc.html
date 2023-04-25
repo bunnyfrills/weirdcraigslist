@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="listings.css">
+  </head>
+  <body>
+          
+        </div>
+ <h1>Misc.</h1>
+
+<img id="carousel" name="slide" width="800" height="400" />
+          
+        </div>
+        <div class="column">
+   
+           <button id=buttonleft>Next
+  
+</button>
+        </div>
+          
+        </div>
+      </div>
+    </div>
+    <div>
+    <script>
+        var i = 0; 			// Start Point
+var images = [];	// Images Array
+
+	 
+// Image List
+images[0] = "https://media.discordapp.net/attachments/411355060878966784/1069875769641291817/image.png";
+images [1] = "https://media.discordapp.net/attachments/411355060878966784/1069878106057347072/image.png";
+
+// Change Image
+const name = document.querySelector(".name");
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", changeImg);
+function changeImg(){
+	document.slide.src = images[i];
+
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+}
+
+// Run function when page loads
+window.onload=changeImg;
+    </script>
+    </div>
+  </body>
+</html>
